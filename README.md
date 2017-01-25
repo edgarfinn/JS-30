@@ -2,3 +2,4 @@ Exercises completed following Wes Bos' [Javascript 30](https://javascript30.com/
 
 1. Gorillaz Soundboard
 2. Analogue Clock
+3, CSS Variables
