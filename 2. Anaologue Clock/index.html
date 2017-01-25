@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>JS30 Clock</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <div class="clock">
+  <div class="clock-face">
+    <div class="hand second-hand"></div>
+    <div class="hand minute-hand"></div>
+    <div class="hand hour-hand"></div>
+  </div>
+</div>
+
+<script>
+  
+  const sHand = document.querySelector('.second-hand'), mHand = document.querySelector('.minute-hand'), hHand = document.querySelector('.hour-hand');
+  
+  function setTime() {
+    const now = new Date();
+    const seconds = now.getSeconds();
+    const minutes = now.getMinutes();
+    console.log(minutes);
+    const hours = now.getHours();
+    const secondsDegrees = (((seconds / 60) * 360) + 90);
+    const minutesDegrees = (((minutes / 60)*360)+90);
+    const hoursDegrees = (((hours / 60)*360)+90);
+    
+    sHand.style.transform = `rotate(${secondsDegrees}deg)`;
+    mHand.style.transform = `rotate(${minutesDegrees}deg)`;
+    hHand.style.transform = `rotate(${hoursDegrees}deg)`;
+    
+ 
+  };
+  
+  
+  setInterval(setTime, 1000)
+
+</script>
+  
+  
+</body>
+</html>
